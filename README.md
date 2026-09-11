@@ -100,7 +100,7 @@ AGPL-3.0 — see [LICENSE](LICENSE).
 
 ## Author
 
-Fox
+rtxLittleKitsune
 
 ## Contributing
 
