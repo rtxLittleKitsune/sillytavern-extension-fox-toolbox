@@ -1,0 +1,186 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   小狐狸的工具箱 / Fox Toolbox — SillyTavern Extension Styles
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Container ─────────────────────────────────────────────────────────────── */
+.fox_toolbox {
+    margin: 8px 0;
+    padding: 0;
+    border-radius: 8px;
+    border: 1px solid var(--SmartThemeBorderColor, #3a3a5c);
+    background: var(--black30a, rgba(0, 0, 0, 0.3));
+    overflow: hidden;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+.fox_toolbox_header {
+    padding: 10px 14px 6px;
+    border-bottom: 1px solid var(--SmartThemeBorderColor, #3a3a5c);
+}
+
+.fox_toolbox_header h4 {
+    margin: 0;
+    font-size: 1.05em;
+    color: var(--SmartThemeBodyColor, #e0e0e0);
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.fox_toolbox_header h4 small {
+    font-size: 0.75em;
+    opacity: 0.6;
+    font-weight: normal;
+}
+
+.fox_toolbox_desc {
+    margin: 4px 0 0;
+    font-size: 0.8em;
+    opacity: 0.65;
+    line-height: 1.4;
+    color: var(--SmartThemeBodyColor, #e0e0e0);
+}
+
+/* ── Action buttons ────────────────────────────────────────────────────────── */
+.fox_toolbox_actions {
+    display: flex;
+    gap: 6px;
+    padding: 8px 14px;
+}
+
+.fox_toolbox_actions .menu_button {
+    flex: 1;
+    justify-content: center;
+    font-size: 0.82em;
+}
+
+/* ── Group sections ─────────────────────────────────────────────────────────── */
+.fox_toolbox_groups {
+    padding: 0 14px 12px;
+}
+
+.fox_toolbox_group {
+    margin-top: 10px;
+}
+
+.fox_toolbox_group_title {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: var(--SmartThemeQuoteColor, #c5a35a);
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed var(--SmartThemeBorderColor, #3a3a5c);
+}
+
+.fox_toolbox_group_title small {
+    font-weight: normal;
+    opacity: 0.5;
+    margin-left: 4px;
+}
+
+/* ── Toggle rows ───────────────────────────────────────────────────────────── */
+.fox_toolbox_rows {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fox_toggle_row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    user-select: none;
+}
+
+.fox_toggle_row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.fox_toggle_label {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    line-height: 1.3;
+}
+
+.fox_toggle_cn {
+    font-size: 0.88em;
+    color: var(--SmartThemeBodyColor, #e0e0e0);
+}
+
+.fox_toggle_key {
+    font-size: 0.72em;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    opacity: 0.5;
+    color: var(--SmartThemeBodyColor, #e0e0e0);
+}
+
+/* ── Toggle switch (iOS-style) ─────────────────────────────────────────────── */
+.fox_toggle_switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.fox_toggle_switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.fox_toggle_slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(120, 120, 120, 0.4);
+    border-radius: 20px;
+    transition: 0.2s;
+    border: 1px solid var(--SmartThemeBorderColor, #3a3a5c);
+}
+
+.fox_toggle_slider::before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--SmartThemeBodyColor, #e0e0e0);
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+/* Checked = excluded = slider moves right and turns red-ish */
+.fox_toggle_switch input:checked + .fox_toggle_slider {
+    background-color: rgba(200, 60, 60, 0.5);
+    border-color: rgba(200, 60, 60, 0.7);
+}
+
+.fox_toggle_switch input:checked + .fox_toggle_slider::before {
+    transform: translateX(16px);
+    background-color: #ff8888;
+}
+
+/* Accessibility: focus outline */
+.fox_toggle_switch input:focus-visible + .fox_toggle_slider {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* ── Responsive: two columns on wider panels ───────────────────────────────── */
+@media (min-width: 500px) {
+    .fox_toolbox_rows {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 8px;
+    }
+}

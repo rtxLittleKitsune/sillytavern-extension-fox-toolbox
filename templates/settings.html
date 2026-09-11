@@ -1,0 +1,45 @@
+<div id="fox_toolbox_container" class="fox_toolbox">
+    <div class="fox_toolbox_header">
+        <h4>
+            🦊 小狐狸的工具箱
+            <small>Fox Toolbox</small>
+        </h4>
+        <p class="fox_toolbox_desc">
+            从请求体中排除参数 — 勾选 = 排除该参数<br>
+            Exclude parameters from the request body — checked = excluded
+        </p>
+    </div>
+
+    <div class="fox_toolbox_actions">
+        <button id="fox_toolbox_select_all" class="menu_button menu_button_small" type="button">
+            <span>全选 / Select All</span>
+        </button>
+        <button id="fox_toolbox_deselect_all" class="menu_button menu_button_small" type="button">
+            <span>全不选 / Deselect All</span>
+        </button>
+    </div>
+
+    <div class="fox_toolbox_groups">
+        {{#each groups}}
+        <div class="fox_toolbox_group">
+            <div class="fox_toolbox_group_title">
+                {{groupCn}} <small>{{groupEn}}</small>
+            </div>
+            <div class="fox_toolbox_rows">
+                {{#each params}}
+                <label class="fox_toggle_row" title="{{desc}}">
+                    <span class="fox_toggle_switch">
+                        <input type="checkbox" name="fox-param-exclude" value="{{key}}" {{#if excluded}}checked{{/if}}>
+                        <span class="fox_toggle_slider"></span>
+                    </span>
+                    <span class="fox_toggle_label">
+                        <span class="fox_toggle_cn">{{cn}}</span>
+                        <span class="fox_toggle_key">{{key}}</span>
+                    </span>
+                </label>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

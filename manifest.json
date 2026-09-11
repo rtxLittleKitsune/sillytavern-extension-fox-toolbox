@@ -1,0 +1,12 @@
+{
+    "display_name": "小狐狸的工具箱",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Fox",
+    "version": "1.0.0",
+    "homePage": "https://github.com/yourname/sillytavern-extension-fox-toolbox",
+    "auto_update": true
+}
