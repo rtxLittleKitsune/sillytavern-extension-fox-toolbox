@@ -49,7 +49,7 @@ Fox Toolbox solves this by hooking into SillyTavern's `CHAT_COMPLETION_SETTINGS_
 3. Click **Install Extension**.
 4. Paste this repository's GitHub URL:
    ```
-   https://github.com/yourname/sillytavern-extension-fox-toolbox
+   https://github.com/rtxLittleKitsune/sillytavern-extension-fox-toolbox
    ```
 5. Click **Install**.
 6. Reload the page (Ctrl+Shift+R). The extension will appear in the Extensions panel.
@@ -59,7 +59,7 @@ Fox Toolbox solves this by hooking into SillyTavern's `CHAT_COMPLETION_SETTINGS_
 1. Clone this repository into your SillyTavern's third-party extensions directory:
    ```
    cd <SillyTavern>/public/scripts/extensions/third-party
-   git clone https://github.com/yourname/sillytavern-extension-fox-toolbox.git
+   git clone https://github.com/rtxLittleKitsune/sillytavern-extension-fox-toolbox.git
    ```
    Or, for per-user installation, clone into:
    ```
@@ -104,4 +104,4 @@ Fox
 
 ## Contributing
 
-Issues and pull requests are welcome at the [GitHub repository](https://github.com/yourname/sillytavern-extension-fox-toolbox).
+Issues and pull requests are welcome at the [GitHub repository](https://github.com/rtxLittleKitsune/sillytavern-extension-fox-toolbox).
