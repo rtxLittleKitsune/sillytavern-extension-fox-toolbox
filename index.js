@@ -162,6 +162,7 @@
         html += '<div class="inline-drawer-content">';
         html += '<div id="' + ROOT_ID + '" class="fox_toolbox">';
 
+        html += '<div class="fox_toolbox_desc">从请求体中排除参数 — 勾选 = 排除该参数<br>Exclude parameters from the request body — checked = excluded</div>';
         html += '<div class="fox_toolbox_actions">';
         html += '<button id="fox_toolbox_select_all" class="menu_button menu_button_small" type="button"><span>全选 / Select All</span></button>';
         html += '<button id="fox_toolbox_deselect_all" class="menu_button menu_button_small" type="button"><span>全不选 / Deselect All</span></button>';
