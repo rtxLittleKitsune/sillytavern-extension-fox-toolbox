@@ -2,43 +2,17 @@
    小狐狸的工具箱 / Fox Toolbox — SillyTavern Extension Styles
    ═══════════════════════════════════════════════════════════════════════════ */
 
+/* The collapsible header/chevron are handled by ST's inline-drawer classes.
+   We only style the inner content here. */
+
 /* ── Container ─────────────────────────────────────────────────────────────── */
 .fox_toolbox {
     margin: 8px 0;
-    padding: 0;
+    padding: 8px 10px;
     border-radius: 8px;
     border: 1px solid var(--SmartThemeBorderColor, #3a3a5c);
     background: var(--black30a, rgba(0, 0, 0, 0.3));
     overflow: hidden;
-}
-
-/* ── Header ────────────────────────────────────────────────────────────────── */
-.fox_toolbox_header {
-    padding: 10px 14px 6px;
-    border-bottom: 1px solid var(--SmartThemeBorderColor, #3a3a5c);
-}
-
-.fox_toolbox_header h4 {
-    margin: 0;
-    font-size: 1.05em;
-    color: var(--SmartThemeBodyColor, #e0e0e0);
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-}
-
-.fox_toolbox_header h4 small {
-    font-size: 0.75em;
-    opacity: 0.6;
-    font-weight: normal;
-}
-
-.fox_toolbox_desc {
-    margin: 4px 0 0;
-    font-size: 0.8em;
-    opacity: 0.65;
-    line-height: 1.4;
-    color: var(--SmartThemeBodyColor, #e0e0e0);
 }
 
 /* ── Action buttons ────────────────────────────────────────────────────────── */

@@ -152,11 +152,16 @@
         const settings = getSettings();
         const excluded = settings.excludedParams;
 
-        let html = '<div id="' + ROOT_ID + '" class="fox_toolbox">';
-        html += '<div class="fox_toolbox_header">';
-        html += '<h4>小狐狸的工具箱 <small>Fox Toolbox</small></h4>';
-        html += '<p class="fox_toolbox_desc">从请求体中排除参数 — 勾选 = 排除该参数<br>Exclude parameters from the request body — checked = excluded</p>';
+        // Wrap the entire panel in SillyTavern's standard inline-drawer
+        // collapsible structure so it collapses/expands like other extensions.
+        let html = '<div class="inline-drawer wide100p">';
+        html += '<div class="inline-drawer-toggle inline-drawer-header">';
+        html += '<b>小狐狸的工具箱 <small>Fox Toolbox</small></b>';
+        html += '<div class="fa-solid fa-circle-chevron-down inline-drawer-icon down"></div>';
         html += '</div>';
+        html += '<div class="inline-drawer-content">';
+        html += '<div id="' + ROOT_ID + '" class="fox_toolbox">';
+
         html += '<div class="fox_toolbox_actions">';
         html += '<button id="fox_toolbox_select_all" class="menu_button menu_button_small" type="button"><span>全选 / Select All</span></button>';
         html += '<button id="fox_toolbox_deselect_all" class="menu_button menu_button_small" type="button"><span>全不选 / Deselect All</span></button>';
@@ -189,7 +194,9 @@
         }
 
         html += '</div>'; // groups
-        html += '</div>'; // container
+        html += '</div>'; // fox_toolbox container
+        html += '</div>'; // inline-drawer-content
+        html += '</div>'; // inline-drawer
         return html;
     }
 
